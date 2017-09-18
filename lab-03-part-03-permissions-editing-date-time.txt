@@ -78,7 +78,8 @@ $ ./copy_to_backup.sh
 
 What command did you use to try to execute the file?  What happens?
 ----------
-
+./copy_to_backup.sh
+No Output
 
 
 ==========
@@ -86,7 +87,7 @@ What command did you use to try to execute the file?  What happens?
 
 What command did you use to do this?
 ----------
-
+nano copy_to_backup.sh
 
 
 ==========
@@ -98,7 +99,11 @@ c. print out "I'm done backing up"
 
 Write out the code in your file below...
 ----------
-
+#!/bin/bash
+cd ~
+mkdir -p backup
+cp -r *.txt
+echo "I'm done backing up"
 
 
 ==========
@@ -109,7 +114,8 @@ Write out the code in your file below...
 
 What commands did you use to do this?
 ----------
-
+cd test
+touch 1.txt 2.txt
 
 
 ==========
@@ -117,7 +123,7 @@ What commands did you use to do this?
 
 What commands did you use to do this?
 ----------
-
+mv copy_to_backup.sh test
 
 
 ==========
@@ -126,10 +132,25 @@ What commands did you use to do this?
 What commands did you use to do this?
 ----------
 
-
+./copy_to_backup.sh
 
 ==========
 14. Verify that a backup folder was created in your home directory... with copies of the files present.
 
 What commands did you use to do this?  Show the output.
 ----------
+ent-v314-015:~ student$ ls
+Adlm			Music			isus
+Adobe			New Unity Project	mtec1002-la-03.tar.gz
+Applications		Pictures		mtec1002-lab-03
+Desktop			Public			pymel.log
+Documents		QLData			scrubs.txt
+Downloads		Things			test
+Library			backup			xgen
+MPLABXProjects		copy_to_bcakup.sh
+Movies			ipe.properties
+
+ent-v314-015:~ student$ cd backup
+ent-v314-015:backup student$ ls
+scrubs.txt
+
