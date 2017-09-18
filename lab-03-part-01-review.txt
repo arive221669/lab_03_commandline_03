@@ -389,3 +389,4 @@ OPTIONAL
 
 Write the command(s) that you used to do this below:
 ----------
+tar -cvf logs.tar.gz logs
